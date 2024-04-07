@@ -1,16 +1,8 @@
-See the .env.example
+# See the .env.example
+# The server uses PostgreSQL and Python 3.12.2
 
 ```sql
-create database maindatabase;
-
-use maindatabase;
-
-create table py_user (
-    id char(36) primary key,
-    name varchar(255) not null,
-    email varchar(255) not null,
-    password varchar(255) not null
-);
+create database test_database;
 ```
 
 ```bash
