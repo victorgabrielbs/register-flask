@@ -22,7 +22,7 @@ class PyUser(db.Model):
     password = db.Column(db.String(255), nullable=False)
 
 @app.route('/', methods=['GET', 'POST'])
-def login():
+def register():
     if request.method == 'POST':
         unique_id = str(uuid.uuid4())
 
