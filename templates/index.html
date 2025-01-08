@@ -9,16 +9,26 @@
 </head>
 <body>
     <form action="/" method="POST">
+        {{ form.hidden_tag() }}
         <label for="name">Nome</label>
-        <input type="text" id="name" name="name">
+        {{ form.name(id='name') }}
+        {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+        {{ form.email(id='email') }}
+        {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
 
         <label for="password">Senha</label>
-        <input type="password" id="password" name="password">
+        {{ form.password(id='password') }}
+        {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
 
-        <input type="submit" value="Entrar">
+        {{ form.submit() }}
     </form>
 </body>
 </html>
