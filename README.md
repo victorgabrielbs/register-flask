@@ -1,5 +1,5 @@
 # See the .env.example
-# The server uses PostgreSQL and Python 3.12.2
+# The server uses PostgreSQL and Python 3.12.8
 
 ```sql
 create database test_database;
